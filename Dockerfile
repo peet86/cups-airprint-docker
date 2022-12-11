@@ -12,6 +12,8 @@ LABEL name="anujdatar/cups"
 LABEL description="CUPS docker image"
 LABEL repository="https://github.com/anujdatar/cups-docker"
 
+RUN mkdir -p /etc/cups
+VOLUME /etc/cups/
 
 # Install dependencies
 RUN apt-get update -qq  && apt-get upgrade -qqy && \
